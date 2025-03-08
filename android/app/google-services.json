@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "347712965984",
+    "project_id": "jett-55c54",
+    "storage_bucket": "jett-55c54.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347712965984:android:798cc9c307aa18e26ca205",
+        "android_client_info": {
+          "package_name": "com.example.jett"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGTNdSzuRPO4OJeJ33BOuqadlROmrXSnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347712965984:android:e0eaa2dbb91641226ca205",
+        "android_client_info": {
+          "package_name": "com.example.jetts"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGTNdSzuRPO4OJeJ33BOuqadlROmrXSnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
