@@ -1,25 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:jetts_fitness_app/screens/login_screen.dart';
-import 'firebase_options.dart'; // Import the Firebase options file
+import 'package:provider/provider.dart';
+import 'providers/class_provider.dart';
+import 'screens/login_screen.dart';
+import 'firebase_options.dart'; // Firebase configuration
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  
+  // Initialize Firebase
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform, // Use FirebaseOptions
+    options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const JettsApp());
+
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ClassProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
-class JettsApp extends StatelessWidget {
-  const JettsApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      home: const LoginScreen(),
+      title: 'Jetts Clone',
+      theme: ThemeData(primarySwatch: Colors.red),
+      home: const LoginScreen(), // Starts with Login Screen
     );
   }
 }
